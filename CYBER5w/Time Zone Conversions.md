@@ -84,3 +84,7 @@
     Local = 22:00:00 + (-7)
     
     10/29/2017 15:00:00
+
+### 4. True or False: Local time was reported as February 28, 2020, 20:20:30 EST. Its time in Coordinated Universal Time is February 29, 2020, 01:20:30 UTC.
+
+    True
