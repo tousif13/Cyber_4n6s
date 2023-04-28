@@ -187,19 +187,19 @@
 
 ![image](https://user-images.githubusercontent.com/33444140/235222823-37295ef2-5726-489c-83aa-238568af7ec1.png)
 
-### b.The Exif data will automatically save the time in localtime, the timezone that the file was taken in. Based on parsing the file in a hex editor, what time was the picture taken?
+### b. The Exif data will automatically save the time in localtime, the timezone that the file was taken in. Based on parsing the file in a hex editor, what time was the picture taken?
 
 ![image](https://user-images.githubusercontent.com/33444140/235221762-a0fa542f-99ca-40ae-a394-b1e62ce5cddd.png)
 
     2018-06-09 17:32:50
    
-### c.Verify the hex timestamp by comparing it to the output of exiftool. Run exiftool(-k).exe against c5w_exif-pink_rose.jpg by issuing the command, "exiftool(-k).exe c5w_exif-pink_rose.jpg". What timestamp does it show that the photo was taken?
+### c. Verify the hex timestamp by comparing it to the output of exiftool. Run exiftool(-k).exe against c5w_exif-pink_rose.jpg by issuing the command, "exiftool(-k).exe c5w_exif-pink_rose.jpg". What timestamp does it show that the photo was taken?
 
 ![image](https://user-images.githubusercontent.com/33444140/235228269-70af0698-8f3b-453f-8c03-fc44ee4fa6ca.png)
 
 ![image](https://user-images.githubusercontent.com/33444140/235228717-99ca18e3-b684-4bd4-a237-1f332a4e88e0.png)
 
-### d.Bonus: What time was the picture taken in UTC? Hint: See what other information is stored in Exif metadata that can help you locate the appropriate timezone.
+### d. Bonus: What time was the picture taken in UTC? Hint: See what other information is stored in Exif metadata that can help you locate the appropriate timezone.
 
 ![image](https://user-images.githubusercontent.com/33444140/235228966-0139c01d-bb8b-462b-a887-5bb0f99a3fd5.png)
 
