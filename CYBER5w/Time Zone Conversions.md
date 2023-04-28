@@ -107,11 +107,11 @@
 
 ### 1. Was the target host on Eastern Standard Time or Eastern Daylight Time when these files were acquired?
 
-    The target was on the Eastern Daylight Time when these files were acquired as the files were acquired at Aug 10 2021 which falls under Eastern Daylight Time.
+    The target was on the Eastern Daylight Time when these files were acquired as the files were acquired at July, May, November 0f 2020,2021 which falls under Eastern Daylight Time.
 
 ### 2. Why are the Modified and Created timestamps on cybersecurity-image.png the same? What may this indicate?
 
-    It means that it is created once and no modification is done from the time of creation.
+    Modified and Created timestamps are same means that it is created once and no modification is done from the time of creation. This indicates that cybersecurity-image.png is downloaded at Created Timestamp time and didn't got modified.
     
 ### 3. When was sample_textdoc.txt first saved? What does the Modification time indicate?
 
@@ -122,3 +122,9 @@
     M - Modified - 2020-May-10 18:34:28
     A - Accessed - 2021-Jul-30 07:33:48
     C - Created  - 2021-Jul-04 20:33:48
+    
+    The reason that the Modified date is earlier than the Created date is that the file is downloaded/moved which is already written/modified at some other place.
+    
+
+
+### 5. Look at anotherdocument.txt's MAC timestamps. What is the most likely reason that the Modified date is earlier than the Created date?
