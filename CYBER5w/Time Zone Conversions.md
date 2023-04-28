@@ -138,7 +138,7 @@
 ## Task 2: File Metadata
 
 ### 1.In the Recycle Bin, "$I" files are generated to contain the metadata for a deleted file. Its hex code will detail the original file's size in bytes, deletion time, and path. For more information about Recycle Bin file format, refer to Cyber5w's Recycle Bin course. The information for its deletion time can be found at byte 0x10, and is 8 bytes long. For more information about Endianness, refer to Cyber5w's Computer and Data Representation course. Use DCode to conduct the following:
-### a.Open Task2\$Recycle.Bin_backup\$I111B13.jpg in a hex editor and locate its deletion time. Highlight the 8 bytes from byte 0x10 to 0x17, and copy the selection in Hexadecimal, Little Endian
+### a. Open Task2\$Recycle.Bin_backup\$I111B13.jpg in a hex editor and locate its deletion time. Highlight the 8 bytes from byte 0x10 to 0x17, and copy the selection in Hexadecimal, Little Endian
 
 ![image](https://user-images.githubusercontent.com/33444140/235157483-b3ceb0e0-f194-4299-8852-db03c952d6e6.png)
 
@@ -146,7 +146,7 @@
 
     64 bits
     
-### c.Open DCode and paste the hex  inthe "Value to Decode" field. In the "Decode Format" dropdown menu, select Windows: 64 bit Hex Value -Little Endian", then press "Decode"
+### c. Open DCode and paste the hex  inthe "Value to Decode" field. In the "Decode Format" dropdown menu, select Windows: 64 bit Hex Value -Little Endian", then press "Decode"
 
 ![image](https://user-images.githubusercontent.com/33444140/235160572-af065acc-c728-4069-b421-42cd31d4f13e.png)
 
@@ -158,3 +158,23 @@
 
     02:51:04 + (-4)
     2021-06-27 22:51:04 EDT
+
+### 2.Many archive files, such as ZIP, RAR, 7Z, and Microsoft DOCX use timestamps to identify times that its containing files were created. For ZIP files, this timestamp can be located at bytes 0x0A to 0x0D (11th to 14th bytes) relative to the start of that entry's File Record. However, this 4-byte segment can be interpreted as 2 Little Endian bytes for the File Time (DOStime) and 2 Little Endian bytes for the File Date (DOSdate), which can be manipulated to be interpreted as MS-DOS: 32-bitHex Value in localtime. This is particularly useful for password-encrypted ZIP files that cannot be extracted through normal means.
+
+### a.Open c5w_timestamp-Sample.zip in a hex editor and locate the first entry's creation timestamp (should be at 0xA-0xD). Highlight the 4 bytes at that location in Hexadecimal, Little Endian.
+
+### b. How many bits are in 4 bytes?
+    
+    32 bits
+    
+### c. Open DCode and paste this value into the "Value to Decode" field, applying the "Decode Format:" equal to "MS-DOS: 32-bitHex Value.
+
+![image](https://user-images.githubusercontent.com/33444140/235165428-4311dea5-bd37-44a6-b735-2c9e77a2ec6e.png)
+
+### d. What time was this file created?
+
+    2021-03-23 09:14:42
+   
+### e. What timezoneis stored in archive files?
+
+    Local
