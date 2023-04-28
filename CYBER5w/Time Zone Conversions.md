@@ -125,6 +125,36 @@
     
     The reason that the Modified date is earlier than the Created date is that the file is downloaded/moved which is already written/modified at some other place.
     
-
-
 ### 5. Look at anotherdocument.txt's MAC timestamps. What is the most likely reason that the Modified date is earlier than the Created date?
+
+    This file too downloaded/moved which is already written/modified at some other place and it may also be due to the Daylight Savings.
+    
+### 5.a. Bonus: What are anotherdocument.txt's MAC timestamps in UTC?
+
+    M - Modified - 2020-Nov-01 06:02:02
+    A - Accessed - 2021-Jul-30 07:33:48
+    C - Created  - 2020-Nov-01 05:59:50
+    
+## Task 2: File Metadata
+
+### 1.In the Recycle Bin, "$I" files are generated to contain the metadata for a deleted file. Its hex code will detail the original file's size in bytes, deletion time, and path. For more information about Recycle Bin file format, refer to Cyber5w's Recycle Bin course. The information for its deletion time can be found at byte 0x10, and is 8 bytes long. For more information about Endianness, refer to Cyber5w's Computer and Data Representation course. Use DCode to conduct the following:
+### a.Open Task2\$Recycle.Bin_backup\$I111B13.jpg in a hex editor and locate its deletion time. Highlight the 8 bytes from byte 0x10 to 0x17, and copy the selection in Hexadecimal, Little Endian
+
+![image](https://user-images.githubusercontent.com/33444140/235157483-b3ceb0e0-f194-4299-8852-db03c952d6e6.png)
+
+### b. How many bits are in 8 bytes?
+
+    64 bits
+    
+### c.Open DCode and paste the hex  inthe "Value to Decode" field. In the "Decode Format" dropdown menu, select Windows: 64 bit Hex Value -Little Endian", then press "Decode"
+
+![image](https://user-images.githubusercontent.com/33444140/235160572-af065acc-c728-4069-b421-42cd31d4f13e.png)
+
+### d. What is this file's deletion time in UTC?
+
+    2021-06-28 02:51:04
+    
+### e. Assuming that this file was deleted in Eastern Time originally, what was the local time that the file was deleted?
+
+    02:51:04 + (-4)
+    2021-06-27 22:51:04 EDT
