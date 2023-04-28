@@ -88,3 +88,37 @@
 ### 4. True or False: Local time was reported as February 28, 2020, 20:20:30 EST. Its time in Coordinated Universal Time is February 29, 2020, 01:20:30 UTC.
 
     True
+
+# File Operations
+
+> Standard Information will record changes and timestamps associated with the raw content of the file.
+
+> Filename attribute will record timestamps associated with the creation of a file's metadata on an individual volume , typically only getting updated upon copying a file or moving it to another volume.
+
+![image](https://user-images.githubusercontent.com/33444140/235131592-d0c7623b-efc3-4584-a9dc-32f7cc88f4c2.png)
+
+![image](https://user-images.githubusercontent.com/33444140/235131672-e287551e-71e0-4320-8232-07081807808a.png)
+
+## Exercise 2
+
+## Task 1 : Inspecting MAC Timestamps
+
+### The following questions should be answered for the files in \Task1\C5W_timestamps.zip. Assume that the host that these files were generated on is in Eastern Timezone
+
+### 1. Was the target host on Eastern Standard Time or Eastern Daylight Time when these files were acquired?
+
+    The target was on the Eastern Daylight Time when these files were acquired as the files were acquired at Aug 10 2021 which falls under Eastern Daylight Time.
+
+### 2. Why are the Modified and Created timestamps on cybersecurity-image.png the same? What may this indicate?
+
+    It means that it is created once and no modification is done from the time of creation.
+    
+### 3. When was sample_textdoc.txt first saved? What does the Modification time indicate?
+
+    sample_textdoc.txt first saved on 2021-Jul-05 23:23:05. The Modification time indicates that the file is modified later as it's time is 2021-Jul-05 23:29:06.
+    
+### 4. What are the MAC timestamps for Notes.csv? What is the most likely reason that the Modified date is earlier than the Created date?
+
+    M - Modified - 2020-May-10 18:34:28
+    A - Accessed - 2021-Jul-30 07:33:48
+    C - Created  - 2021-Jul-04 20:33:48
