@@ -175,6 +175,9 @@
 
     2021-03-23 09:14:42
    
-### e. What timezoneis stored in archive files?
+### e. What timezone is stored in archive files?
 
     Local
+
+### 3.Certain file types will include "ExifData", which is usually metadata about an image and the camera that took it. The most common file type that will include Exif Data is JPG files. Exif data usually includes a lot of information, such as the make and model of the camera that took the picture, the resolution of the picture, the GPS location that the picture was taken at, the camera's lens configuration, exposure, color encoding, flash, field of depth, time the file was taken, and more. This data can be read in Phil Harvey's ExifTool, a hex editor, an Exif Data Viewer online.
+
