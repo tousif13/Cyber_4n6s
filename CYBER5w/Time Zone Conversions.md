@@ -163,6 +163,8 @@
 
 ### a.Open c5w_timestamp-Sample.zip in a hex editor and locate the first entry's creation timestamp (should be at 0xA-0xD). Highlight the 4 bytes at that location in Hexadecimal, Little Endian.
 
+![image](https://user-images.githubusercontent.com/33444140/235220553-27b14c5d-0d20-4f3c-997a-4adb6f539f5d.png)
+
 ### b. How many bits are in 4 bytes?
     
     32 bits
@@ -181,3 +183,27 @@
 
 ### 3.Certain file types will include "ExifData", which is usually metadata about an image and the camera that took it. The most common file type that will include Exif Data is JPG files. Exif data usually includes a lot of information, such as the make and model of the camera that took the picture, the resolution of the picture, the GPS location that the picture was taken at, the camera's lens configuration, exposure, color encoding, flash, field of depth, time the file was taken, and more. This data can be read in Phil Harvey's ExifTool, a hex editor, an Exif Data Viewer online.
 
+### a. Open c5w_exif-pink_rose.jpg in a hex editor andreview its Exif data (look for the word, "Exif"). Most of the Exif data should be in plaintext, making it readable without decoding it.
+
+![image](https://user-images.githubusercontent.com/33444140/235222823-37295ef2-5726-489c-83aa-238568af7ec1.png)
+
+### b.The Exif data will automatically save the time in localtime, the timezone that the file was taken in. Based on parsing the file in a hex editor, what time was the picture taken?
+
+![image](https://user-images.githubusercontent.com/33444140/235221762-a0fa542f-99ca-40ae-a394-b1e62ce5cddd.png)
+
+    2018-06-09 17:32:50
+   
+### c.Verify the hex timestamp by comparing it to the output of exiftool. Run exiftool(-k).exe against c5w_exif-pink_rose.jpg by issuing the command, "exiftool(-k).exe c5w_exif-pink_rose.jpg". What timestamp does it show that the photo was taken?
+
+![image](https://user-images.githubusercontent.com/33444140/235228269-70af0698-8f3b-453f-8c03-fc44ee4fa6ca.png)
+
+![image](https://user-images.githubusercontent.com/33444140/235228717-99ca18e3-b684-4bd4-a237-1f332a4e88e0.png)
+
+### d.Bonus: What time was the picture taken in UTC? Hint: See what other information is stored in Exif metadata that can help you locate the appropriate timezone.
+
+![image](https://user-images.githubusercontent.com/33444140/235228966-0139c01d-bb8b-462b-a887-5bb0f99a3fd5.png)
+
+    The GPS co-ordinates of this photo is 48 deg 50' 48.73" N, 2 deg 20' 3.31" E which is location of Paris, France. The local timezone of Paris is CEST (Daylight time) which is +2 of UTC offset.
+    
+    So, 17:32:50 - (+2)
+    2018-06-09 15:32:50 UTC
